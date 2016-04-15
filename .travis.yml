@@ -11,7 +11,7 @@ install:
   # Add ansible.cfg to pick up roles path.
   - "{ echo '[defaults]'; echo 'roles_path = ../'; } >> ansible.cfg"
   # Automatically create the inventory
-  - "echo 'localhost' > $INVENTORY"
+  #- "echo 'localhost' > $INVENTORY"
 
 script:
   # Check the role/playbook's syntax.
