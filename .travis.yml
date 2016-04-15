@@ -31,5 +31,5 @@ script:
   #- curl --head --insecure https://localhost/
 
   # Verify a known port is opened
-  - sudo netstat -tlnp | grep ":58846"
+  #- sudo netstat -tlnp | grep ":58846"
 
