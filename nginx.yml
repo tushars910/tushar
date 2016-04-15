@@ -1,0 +1,14 @@
+---
+- hosts: all
+  tasks:
+    - name: Installs epel-release services
+      apt: pkg=epel-release state=installed update_cache=true
+      
+    - name: Installs nginx web server
+      apt: pkg=nginx state=installed update_cache=true
+      notify:
+        - start nginx
+
+  handlers:
+    - name: start nginx
+      service: name=nginx state=started
